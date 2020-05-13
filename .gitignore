@@ -6,3 +6,4 @@ a*
 b*
 holy*
 .DS_Store
+*.pyc
