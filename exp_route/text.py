@@ -1,4 +1,4 @@
-def tt(k):
+def sumo_conf(k):
     return '<?xml version="1.0" encoding="UTF-8"?>\n\
     <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">\n\
         <input>\n\

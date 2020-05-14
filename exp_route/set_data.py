@@ -12,18 +12,26 @@ if 'SUMO_HOME' in os.environ:
 import sumolib
 
 
-
 action = [130,120,110,100,90,80,70,60]
 
 vehicle_id = '<vehicle id="%s" type="type%s" route="route%s" depart="%s" departLane="free" departSpeed="%s" departPos="base">\n'\
                 '<param key="has.driverstate.device" value="true"/>\n'\
                 '</vehicle>\n'
+route_title='<vType id="type1" vClass="passenger"/>\n'\
+                            '<vType id="type2" vClass="custom1"/>\n'\
+                            '<vType id="type3" vClass="custom2"/>\n'\
+                            '<route id="route1" color="1,1,0" edges="lane_s01 lane_s02 lane_s_connect01 lane_s03 lane_s_connect02 lane_s_connect03 lane_s04"/>\n'\
+                            '<route id="route2" color="0,1,0" edges="lane_s01 lane_s02 lane_s_connect01 lane_s_out01 lane_s_out02 lane_s_connect_out02"/>\n'\
+                            '<route id="route3" color="1,0,0" edges="lane_s_connect_in02 lane_s_in01 lane_s_in02 lane_s_connect02 lane_s_connect03 lane_s04"/>\n'
+
 file_name = ['a1','a2','a3','a4','a5','a6','a7','a8']
+Q_table = pd.read_csv('../flow/Q_table.csv')
 flow=427
 out_flow=80
-time=[]
-
-
+Epoch=100
+Alpha=0.9
+Gamma=0.9
+#Q(S,A)<-(1-Alpha)Q(S,A)+Alpha(reward+Gamma(Q(S',A)))
 
 
 def route_set(freetrips,flow,out_flow,time,shoulder):
@@ -60,25 +68,23 @@ def route_set(freetrips,flow,out_flow,time,shoulder):
     print('done')
 
 
+def route_generate(flow,out_flow,action,file_name):
+    time=[]
+    for i in range(flow):
+        time.append(float(random.randint(0,29999)/100))
+    time.sort()
+    for i in range(np.size(action)):
+        with open(file_name[i]+'.sumocfg','w') as f:
+            x=text.sumo_conf(file_name[i])
+            f.write(x)
+        with open(file_name[i]+'.xml','w') as freetrips:
+            sumolib.writeXMLHeader(freetrips,'Danny Cheng, departLane: free','routes')
+            freetrips.write(route_title)
+            route_set(freetrips,flow,out_flow,time,action[i])
+            freetrips.write("</routes>\n")
 
-for i in range(flow):
-    time.append(float(random.randint(0,29999)/100))
-time.sort()
-for i in range(np.size(action)):
-    with open(file_name[i]+'.sumocfg','w') as f:
-        x=text.tt(file_name[i])
-        f.write(x)
-    with open(file_name[i]+'.xml','w') as freetrips:
-        sumolib.writeXMLHeader(freetrips,'Danny Cheng, departLane: free','routes')
-        freetrips.write('<vType id="type1" vClass="passenger"/>\n'\
-                        '<vType id="type2" vClass="custom1"/>\n'\
-                        '<vType id="type3" vClass="custom2"/>\n'\
-                        '<route id="route1" color="1,1,0" edges="lane_s01 lane_s02 lane_s_connect01 lane_s03 lane_s_connect02 lane_s_connect03 lane_s04"/>\n'\
-                        '<route id="route2" color="0,1,0" edges="lane_s01 lane_s02 lane_s_connect01 lane_s_out01 lane_s_out02 lane_s_connect_out02"/>\n'\
-                        '<route id="route3" color="1,0,0" edges="lane_s_connect_in02 lane_s_in01 lane_s_in02 lane_s_connect02 lane_s_connect03 lane_s04"/>\n')
-        route_set(freetrips,flow,out_flow,time,action[i])
-        freetrips.write("</routes>\n")
-    #print('Output %s_policy trip file done!'%options.policy)
+route_generate(flow,out_flow,action,file_name)
+
 
 result_list=[]
 for i in range(np.size(action)):
