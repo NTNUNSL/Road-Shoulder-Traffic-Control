@@ -24,8 +24,8 @@ route_title='<vType id="type1" vClass="passenger"/>\n'\
                             '<route id="route2" color="0,1,0" edges="lane_s01 lane_s02 lane_s_connect01 lane_s_out01 lane_s_out02 lane_s_connect_out02"/>\n'\
                             '<route id="route3" color="1,0,0" edges="lane_s_connect_in02 lane_s_in01 lane_s_in02 lane_s_connect02 lane_s_connect03 lane_s04"/>\n'
 
-
-Q_table = pd.read_csv('../flow/Q_table.csv')
+State = pd.read_csv('../flow/flow_2018-0215.csv')
+Q_table = pd.read_csv('Q_table.csv')
 Q_now=Q_table
 
 Epoch=100
@@ -69,51 +69,49 @@ def route_set(freetrips,flow,out_flow,time,shoulder):
         count+=1
     print('done')
 
-
 def route_generate(flow,out_flow,action,file_name):
     time=[]
     for i in range(flow):
         time.append(float(random.randint(0,29999)/100))
     time.sort()
     for i in range(np.size(action)):
-        with open(file_name[i]+'.sumocfg','w') as f:
+        with open('C_route/'+file_name[i]+'.sumocfg','w') as f:
             x=text.sumo_conf(file_name[i])
             f.write(x)
-        with open(file_name[i]+'.xml','w') as freetrips:
+        with open('C_route/'+file_name[i]+'.xml','w') as freetrips:
             sumolib.writeXMLHeader(freetrips,'Danny Cheng, departLane: free','routes')
             freetrips.write(route_title)
             route_set(freetrips,flow,out_flow,time,action[i])
             freetrips.write("</routes>\n")
 
-route_generate(flow,out_flow,action,file_name)
+def simulate():
+    result_list=[]
+    for i in range(np.size(action)):
+        tmp=[]
+        command='sumo -c %s.sumocfg --no-warnings'%('C_route/'+file_name[i])
+        result=os.popen(command).read()
+        t = result.split('\n')
+        for j in range(np.size(t)):
+            if 'DepartDelay:' in t[j]:
+                rate=action[i]/flow
+                Delay=float(result.split('\n')[j].split(' ')[2])
+                print(rate)
+                print(float(math.log10(Delay)))
+                tmp.append(action[i])
+                tmp.append(Delay)
+                tmp.append('%.2f'%((1-float(rate))+float(1/math.log10(Delay))))
+                result_list.append(tmp)
+                break
+    print(result_list)
+    m=[0,0,0]
+    for i in result_list:
+        if float(i[2])>float(m[2]):
+            m=i
+    print(m)
 
-
-result_list=[]
-for i in range(np.size(action)):
-    tmp=[]
-    command='sumo -c %s.sumocfg --no-warnings'%file_name[i]
-    result=os.popen(command).read()
-    t = result.split('\n')
-    for j in range(np.size(t)):
-        if 'DepartDelay:' in t[j]:
-            rate=action[i]/flow
-            Delay=float(result.split('\n')[j].split(' ')[2])
-            print(rate)
-            print(float(math.log10(Delay)))
-            tmp.append(action[i])
-            tmp.append(Delay)
-            tmp.append('%.2f'%((1-float(rate))+float(1/math.log10(Delay))))
-            result_list.append(tmp)
-            break
-print(result_list)
-m=[0,0,0]
-for i in result_list:
-    if float(i[2])>float(m[2]):
-        m=i
-print(m)
-
-
-
+if __name__ == "__main__":
+    route_generate(flow,out_flow,action,file_name)
+    simulate()
 
 
 
