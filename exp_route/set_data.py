@@ -13,7 +13,7 @@ import sumolib
 
 
 action = [130,120,110,100,90,80,70,60]
-
+file_name = ['a1','a2','a3','a4','a5','a6','a7','a8']
 vehicle_id = '<vehicle id="%s" type="type%s" route="route%s" depart="%s" departLane="free" departSpeed="%s" departPos="base">\n'\
                 '<param key="has.driverstate.device" value="true"/>\n'\
                 '</vehicle>\n'
@@ -24,15 +24,17 @@ route_title='<vType id="type1" vClass="passenger"/>\n'\
                             '<route id="route2" color="0,1,0" edges="lane_s01 lane_s02 lane_s_connect01 lane_s_out01 lane_s_out02 lane_s_connect_out02"/>\n'\
                             '<route id="route3" color="1,0,0" edges="lane_s_connect_in02 lane_s_in01 lane_s_in02 lane_s_connect02 lane_s_connect03 lane_s04"/>\n'
 
-file_name = ['a1','a2','a3','a4','a5','a6','a7','a8']
+
 Q_table = pd.read_csv('../flow/Q_table.csv')
-flow=427
-out_flow=80
+Q_now=Q_table
+
 Epoch=100
 Alpha=0.9
 Gamma=0.9
 #Q(S,A)<-(1-Alpha)Q(S,A)+Alpha(reward+Gamma(Q(S',A)))
-
+Reward_total=[]
+flow=427
+out_flow=80
 
 def route_set(freetrips,flow,out_flow,time,shoulder):
     done_flow=[]
@@ -104,6 +106,11 @@ for i in range(np.size(action)):
             result_list.append(tmp)
             break
 print(result_list)
+m=[0,0,0]
+for i in result_list:
+    if float(i[2])>float(m[2]):
+        m=i
+print(m)
 
 
 
