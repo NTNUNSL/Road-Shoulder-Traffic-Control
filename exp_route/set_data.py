@@ -38,10 +38,10 @@ Reward_total=[]
 flow=427
 out_flow=80
 
-def route_set(freetrips,flow,out_flow,time,shoulder):
+def route_set(freetrips,flow,out_flow,t_speed,time,shoulder):
     done_flow=[]
     num,k,count=0,0,0
-    t_speed='8.54'
+    #t_speed='8.54'
     while (num<out_flow):
         if flow>np.size(done_flow):
             if(random.randint(1,20))>15:
@@ -72,7 +72,7 @@ def route_set(freetrips,flow,out_flow,time,shoulder):
         count+=1
     #print('done')
 
-def route_generate(flow,out_flow,time,action,file_name):
+def route_generate(flow,out_flow,time,t_speed,action,file_name):
     '''time=[]
     for i in range(flow):
         time.append(float(random.randint(0,29999)/100))
@@ -86,7 +86,7 @@ def route_generate(flow,out_flow,time,action,file_name):
         with open('C_route/%s_%s.xml'%(str(flow),file_name[i]),'w') as freetrips:
             sumolib.writeXMLHeader(freetrips,'Danny Cheng, departLane: free','routes')
             freetrips.write(route_title)
-            route_set(freetrips,flow,out_flow,time,action[i])
+            route_set(freetrips,flow,out_flow,t_speed,time,action[i])
             freetrips.write("</routes>\n")
 
 def simulate(flow):

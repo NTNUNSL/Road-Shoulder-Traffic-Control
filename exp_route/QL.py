@@ -13,6 +13,7 @@ import optparse
 import pandas as pd
 import numpy as np
 import glob
+import time as Time
 
 if 'SUMO_HOME' in os.environ:
     sys.path.append(os.path.join(os.environ['SUMO_HOME'], 'tools'))
@@ -34,15 +35,17 @@ Gamma=0.9
 flow = 430
 out = 55
 
-
+P_time_s = Time.time()
 for i in State:
     C_state = pd.read_csv(i)
     size = len(C_state)
     for epoch in range(2):
         time = []
         for j in range (len(C_state)):
+            S_time = Time.time()
             C_flow = C_state['flow'][j]
             C_out  = C_state['out'][j]
+            C_speed = C_state['speed'][j] if int(C_state['speed'][j])<17 else 'max'
             N_flow = C_state['flow'][j+1] if j<size-1 else 0
             C_time = []
             print('%s Epoch : %s, state : %s, flow : %s, out : %s'%(i.split('/')[2],epoch+1,j,C_flow,C_out))
@@ -51,9 +54,10 @@ for i in State:
                 C_time.append(tmp)
                 time.append(tmp+(j*300))
             C_time.sort()
-            set_data.route_generate(C_flow,C_out,C_time,action,file_name)
+            set_data.route_generate(C_flow,C_out,C_time,C_speed,action,file_name)
             set_data.simulate(C_flow)
             #####   update next state table   #####
+            print(Time.time()-S_time)
             ns = next_state[C_flow-300]
             for k in range (len(ns)):
                 if ns[k] == 0 or ns[k] == N_flow:
@@ -62,7 +66,7 @@ for i in State:
         print('%s Epoch : %s Finished!'%(i.split('/')[2],epoch+1))
         time.sort()
 
-
+P_time_e = Time.time()
 '''set_data.route_generate(flow,out,time,action,file_name)
 set_data.simulate(flow)
 
