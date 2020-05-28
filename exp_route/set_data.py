@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @file    set_data.py
+# @author  Danny Cheng
+# @date    2020-05-11
+# Generate simulation file and get its result
+
 import os
 import sys
 import math
@@ -6,6 +13,7 @@ import optparse
 import pandas as pd
 import numpy as np
 import text
+import glob
 
 if 'SUMO_HOME' in os.environ:
     sys.path.append(os.path.join(os.environ['SUMO_HOME'], 'tools'))
@@ -24,13 +32,7 @@ route_title='<vType id="type1" vClass="passenger"/>\n'\
                             '<route id="route2" color="0,1,0" edges="lane_s01 lane_s02 lane_s_connect01 lane_s_out01 lane_s_out02 lane_s_connect_out02"/>\n'\
                             '<route id="route3" color="1,0,0" edges="lane_s_connect_in02 lane_s_in01 lane_s_in02 lane_s_connect02 lane_s_connect03 lane_s04"/>\n'
 
-State = pd.read_csv('../flow/flow_2018-0215.csv')
-Q_table = pd.read_csv('Q_table.csv')
-Q_now=Q_table
 
-Epoch=100
-Alpha=0.9
-Gamma=0.9
 #Q(S,A)<-(1-Alpha)Q(S,A)+Alpha(reward+Gamma(Q(S',A)))
 Reward_total=[]
 flow=427
@@ -58,45 +60,49 @@ def route_set(freetrips,flow,out_flow,time,shoulder):
             num=out_flow
     last = shoulder-np.size(done_flow)
     if last > 0 :
-        print(last)
+        #print(last)
         for a in range(last):
             freetrips.write(vehicle_id%(k,'3','1',(time[count]),t_speed))
+            k+=1
             count+=1
             done_flow.append(num)
     for j in range(flow-np.size(done_flow)):
         freetrips.write(vehicle_id%(k,'1','1',(time[count]),t_speed))
         k+=1
         count+=1
-    print('done')
+    #print('done')
 
-def route_generate(flow,out_flow,action,file_name):
-    time=[]
+def route_generate(flow,out_flow,time,action,file_name):
+    '''time=[]
     for i in range(flow):
         time.append(float(random.randint(0,29999)/100))
-    time.sort()
+    time.sort()'''
+
     for i in range(np.size(action)):
-        with open('C_route/'+file_name[i]+'.sumocfg','w') as f:
-            x=text.sumo_conf(file_name[i])
+        with open('C_route/%s_%s.sumocfg'%(str(flow),file_name[i]),'w') as f:
+            t = '%s_%s'%(str(flow),file_name[i])
+            x=text.sumo_conf(t)
             f.write(x)
-        with open('C_route/'+file_name[i]+'.xml','w') as freetrips:
+        with open('C_route/%s_%s.xml'%(str(flow),file_name[i]),'w') as freetrips:
             sumolib.writeXMLHeader(freetrips,'Danny Cheng, departLane: free','routes')
             freetrips.write(route_title)
             route_set(freetrips,flow,out_flow,time,action[i])
             freetrips.write("</routes>\n")
 
-def simulate():
+def simulate(flow):
     result_list=[]
     for i in range(np.size(action)):
         tmp=[]
-        command='sumo -c %s.sumocfg --no-warnings'%('C_route/'+file_name[i])
+        r = 'C_route/%s_%s'%(str(flow),file_name[i])
+        command='sumo -c %s.sumocfg --no-warnings'%(r)
         result=os.popen(command).read()
         t = result.split('\n')
         for j in range(np.size(t)):
             if 'DepartDelay:' in t[j]:
                 rate=action[i]/flow
                 Delay=float(result.split('\n')[j].split(' ')[2])
-                print(rate)
-                print(float(math.log10(Delay)))
+                #print(rate)
+                #print(float(math.log10(Delay)))
                 tmp.append(action[i])
                 tmp.append(Delay)
                 tmp.append('%.2f'%((1-float(rate))+float(1/math.log10(Delay))))
@@ -110,8 +116,14 @@ def simulate():
     print(m)
 
 if __name__ == "__main__":
-    route_generate(flow,out_flow,action,file_name)
-    simulate()
+    flow =436
+    out=23
+    time=[]
+    for i in range(flow):
+        time.append(float(random.randint(0,29999)/100))
+    time.sort()
+    route_generate(flow,out,time,action,file_name)
+    simulate(flow)
 
 
 

@@ -1,0 +1,34 @@
+VirtualBox XPCOM Server 5.2.34_Ubuntu r133883 linux.amd64 (Oct 23 2019 13:26:08) release log
+00:00:00.000116 main     Log opened 2020-03-25T11:40:56.047459000Z
+00:00:00.000117 main     Build Type: release
+00:00:00.000119 main     OS Product: Linux
+00:00:00.000119 main     OS Release: 4.15.0-91-generic
+00:00:00.000120 main     OS Version: #92-Ubuntu SMP Fri Feb 28 11:09:48 UTC 2020
+00:00:00.000138 main     DMI Product Name: System Product Name
+00:00:00.000143 main     DMI Product Version: System Version
+00:00:00.000176 main     Host RAM: 32135MB (31.3GB) total, 30346MB (29.6GB) available
+00:00:00.000179 main     Executable: /usr/lib/virtualbox/VBoxSVC
+00:00:00.000179 main     Process ID: 2598
+00:00:00.000179 main     Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.001239 main     IPC socket path: /tmp/.vbox-cheng-ipc/ipcd
+00:00:00.104523 nspr-2   VirtualBox: object creation starts
+00:00:00.104599 nspr-2   Home directory: '/home/cheng/.config/VirtualBox'
+00:00:00.112248 nspr-2   Failed to retrive disk info: getDiskName(/dev/mapper/nslab--server--vg-root) --> nslab--server--vg-root
+00:00:00.116901 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for br-bef08a97f95e: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.117327 nspr-2   NAT: resolv.conf: nameserver 127.0.0.53
+00:00:00.117337 nspr-2   NAT: resolv.conf: ignoring "options edns0"
+00:00:00.117343 nspr-2   HostDnsMonitor::updateInfo
+00:00:00.117351 nspr-2   HostDnsMonitor: old information
+00:00:00.117353 nspr-2     no server entries
+00:00:00.117355 nspr-2     no domain set
+00:00:00.117357 nspr-2     no search string entries
+00:00:00.117359 nspr-2   HostDnsMonitor: new information
+00:00:00.117361 nspr-2     server 1: 127.0.0.53
+00:00:00.117364 nspr-2     no domain set
+00:00:00.117365 nspr-2     no search string entries
+00:00:00.119392 nspr-2   VD: VDInit finished with VINF_SUCCESS
+00:00:00.122378 nspr-2   VirtualBox: object created
+00:00:05.125183 main     VirtualBox: object deletion starts
+00:00:05.623625 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={9570b9d5-f1a1-448a-10c5-e12f5285adad} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+00:00:10.126013 main     {00007efbe4017c40} HostPowerServiceLinux::~HostPowerServiceLinux: RTThreadWait() for 5000 ms failed with VERR_TIMEOUT
+00:00:10.126696 main     VirtualBox: object deleted

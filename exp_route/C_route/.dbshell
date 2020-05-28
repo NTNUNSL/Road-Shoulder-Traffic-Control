@@ -1,0 +1,221 @@
+ls
+help
+ls
+help
+show dbs
+show collection
+show users
+show logs
+help
+db.help()
+show
+help
+show dbs
+show logs
+show
+show dbs
+test
+show collections
+show post
+db.foo.find()
+use test
+show logs
+db.mycoll.help()
+use runoobdb
+db.site.find()
+db.sites.find()
+use CDC
+list
+help
+show collections
+db.mycoll
+db.mycoll.token
+db.mycoll.token()
+db.mycoll.token[0]
+db.mycoll.token.show()
+show db.mycoll.token
+db.mycoll.help
+db.mycoll.help()
+db.mycoll.find()
+db.mycoll.getDB()
+db.mycoll.find().count()
+db.mycoll.find(...)
+db.mycoll.find()
+db.mycoll.find('name')
+db.mycoll.find('Yolan')
+db.mycoll.find('Yilan')
+db.mycoll.findOne(['Yilan'])
+db.mycoll.findOne(['name'])
+db.mycoll.findOne('name')
+db.mycoll.findOne('Yilan')
+use CDC
+help
+show collections
+use CDC
+show collections
+CDC.device
+CDC.device.show()
+db
+collection
+db.help
+help
+show collections
+post
+post.find()
+post.find_one()
+db.post.find_one()
+use cdc
+help
+show dbs
+use CDC
+show collections
+San.find()
+db.San.find()
+db.San.find({"user_id":"U7f7df9052d4ad86cb510aefc4c375881"})
+use cdc
+show dbs
+use CDC
+db.Yilan.find()
+show
+dbs
+show dbs
+use CDC
+show hospital
+db.hospital
+db.woken
+db.token
+db.token()
+db.token.find()
+db.device.find()
+it
+db.token.find()
+db.device.find({'loc':'cdc1'})
+db.device.find({'loc':'CDC-1'})
+it
+db.device.find({'loc':'CDC-1'})
+db.device.find()
+it
+db.device.find()
+it
+db.token.find()
+db.device.find()
+it
+db.device.find()
+it
+db.token.find()
+db.device.find()
+it
+db.device.find()
+it
+db.token.find()
+db.device.find()
+it
+db.device.find()
+it
+db.token.find()
+use CDC
+db.token.find()
+use CDC
+db.device.find()
+it
+db.device.find()
+it
+db.token.find()
+us CDC
+use CDC
+db.token.find()
+db.device.find()
+it
+use CDC
+db.token.find()
+db.device.find({'loc':'ntnu_test'})
+db.token.find()
+db.device.find({'loc':'ntnu_e'})
+db.device.find({'loc':'ntnu_s'})
+list
+show dbs
+use highway
+db.case
+db.case.find_all
+db.case.find_all()
+db.case.find
+db.case.find()
+it
+use cdc
+list
+db.list
+db.collection.find()
+db.collection.find
+db.collection.find_all()
+db.collection.find()
+db.hospital.find()
+db.hospital.find({})
+help
+dbs
+show dbs
+use CDC
+show collections
+it
+db.token.find()
+ls
+show user
+show users
+show profile
+show dbs
+use highway
+help
+db.case.fing({})
+db.case.find({})
+it
+hrlp
+help
+show logs
+db.mycoll.help()
+db.case.find().count()
+轟隆隆隆🤣🤣隆隆隆隆衝衝衝衝😏😏😏拉風😎😎😎引擎發動🔑🔑🔑引擎發動+🚗+👉+🚗
+show dbs
+use CDC
+help
+db.help
+help
+show collections
+db.Ymuh.find()
+db.token.find()
+show dbs
+show dbs
+show dbs
+use highway
+db.collections shoe
+db.collections show
+db.help
+db help
+help
+db.help()
+db.getcollectionname()
+db.getcollectionNames()
+db.getCollectionNames()
+db.case.find()
+use CDC
+show dbs
+db.help()
+db.collections()
+db.collections.show()
+db.getCollectionNames()
+db.CDC-1.find()
+db.CDC-1.find({})
+db.San
+db.San()
+db.San.find()
+db.getCollectionNames()
+db.subscribe.find()
+use CDC
+db.Yilan.find()
+use CDC
+db.subscribe.find()
+use CDC
+db.subscribe.find()
+help
+show logs
+use CDC
+db.token.find()
+db.subscribe.find()

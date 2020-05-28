@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated on 2020-05-27 15:55:45.703776 by Danny Cheng, departLane: free
+  options: 
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+<vType id="type1" vClass="passenger"/>
+<vType id="type2" vClass="custom1"/>
+<vType id="type3" vClass="custom2"/>
+<route id="route1" color="1,1,0" edges="lane_s01 lane_s02 lane_s_connect01 lane_s03 lane_s_connect02 lane_s_connect03 lane_s04"/>
+<route id="route2" color="0,1,0" edges="lane_s01 lane_s02 lane_s_connect01 lane_s_out01 lane_s_out02 lane_s_connect_out02"/>
+<route id="route3" color="1,0,0" edges="lane_s_connect_in02 lane_s_in01 lane_s_in02 lane_s_connect02 lane_s_connect03 lane_s04"/>
+<vehicle id="0" type="type1" route="route1" depart="0.32" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="1" type="type1" route="route1" depart="0.85" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="2" type="type1" route="route1" depart="2.21" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="3" type="type1" route="route1" depart="2.79" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="4" type="type1" route="route1" depart="3.41" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="5" type="type3" route="route2" depart="3.88" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="6" type="type1" route="route1" depart="4.65" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="7" type="type3" route="route2" depart="6.16" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="8" type="type1" route="route1" depart="6.19" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="9" type="type3" route="route2" depart="6.4" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="10" type="type1" route="route1" depart="6.89" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="11" type="type1" route="route1" depart="10.68" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="12" type="type1" route="route1" depart="10.94" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="13" type="type1" route="route1" depart="11.2" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="14" type="type1" route="route1" depart="11.5" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="15" type="type1" route="route1" depart="11.54" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="16" type="type1" route="route1" depart="12.72" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="17" type="type1" route="route1" depart="14.81" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="18" type="type1" route="route1" depart="15.0" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="19" type="type1" route="route1" depart="15.9" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="20" type="type1" route="route1" depart="16.32" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="21" type="type3" route="route2" depart="16.55" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="22" type="type3" route="route2" depart="16.66" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="23" type="type1" route="route1" depart="16.76" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="24" type="type1" route="route1" depart="18.79" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="25" type="type1" route="route1" depart="19.1" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="26" type="type1" route="route1" depart="19.76" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="27" type="type1" route="route1" depart="19.91" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="28" type="type3" route="route2" depart="19.98" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="29" type="type1" route="route1" depart="20.16" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="30" type="type3" route="route2" depart="21.12" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="31" type="type1" route="route1" depart="21.16" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="32" type="type1" route="route1" depart="21.41" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="33" type="type1" route="route1" depart="24.34" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="34" type="type1" route="route1" depart="24.69" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="35" type="type1" route="route1" depart="25.41" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="36" type="type1" route="route1" depart="27.02" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="37" type="type3" route="route2" depart="27.22" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="38" type="type3" route="route2" depart="29.21" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="39" type="type1" route="route1" depart="29.65" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="40" type="type1" route="route1" depart="31.05" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="41" type="type1" route="route1" depart="32.46" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="42" type="type1" route="route1" depart="32.68" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="43" type="type1" route="route1" depart="32.9" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="44" type="type1" route="route1" depart="32.98" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="45" type="type1" route="route1" depart="33.21" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="46" type="type1" route="route1" depart="33.82" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="47" type="type3" route="route2" depart="34.15" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="48" type="type1" route="route1" depart="34.9" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="49" type="type1" route="route1" depart="35.06" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="50" type="type1" route="route1" depart="38.72" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="51" type="type1" route="route1" depart="39.36" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="52" type="type1" route="route1" depart="40.27" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="53" type="type1" route="route1" depart="41.68" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="54" type="type1" route="route1" depart="42.67" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="55" type="type3" route="route2" depart="43.17" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="56" type="type1" route="route1" depart="45.12" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="57" type="type1" route="route1" depart="45.51" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="58" type="type1" route="route1" depart="46.27" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="59" type="type1" route="route1" depart="48.73" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="60" type="type3" route="route2" depart="49.1" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="61" type="type1" route="route1" depart="49.28" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="62" type="type1" route="route1" depart="49.3" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="63" type="type1" route="route1" depart="49.55" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="64" type="type3" route="route2" depart="50.3" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="65" type="type3" route="route2" depart="50.31" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="66" type="type1" route="route1" depart="50.33" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="67" type="type1" route="route1" depart="50.35" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="68" type="type1" route="route1" depart="50.48" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="69" type="type1" route="route1" depart="50.68" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="70" type="type1" route="route1" depart="51.02" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="71" type="type1" route="route1" depart="51.24" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="72" type="type1" route="route1" depart="51.33" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="73" type="type3" route="route2" depart="51.75" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="74" type="type1" route="route1" depart="52.76" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="75" type="type1" route="route1" depart="52.96" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="76" type="type1" route="route1" depart="53.65" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="77" type="type1" route="route1" depart="54.59" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="78" type="type3" route="route2" depart="55.1" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="79" type="type1" route="route1" depart="57.51" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="80" type="type1" route="route1" depart="57.74" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="81" type="type1" route="route1" depart="58.65" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="82" type="type1" route="route1" depart="58.65" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="83" type="type1" route="route1" depart="59.62" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="84" type="type1" route="route1" depart="60.69" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="85" type="type1" route="route1" depart="61.12" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="86" type="type1" route="route1" depart="62.83" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="87" type="type1" route="route1" depart="63.5" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="88" type="type1" route="route1" depart="64.34" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="89" type="type1" route="route1" depart="64.45" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="90" type="type1" route="route1" depart="64.47" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="91" type="type1" route="route1" depart="64.91" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="92" type="type1" route="route1" depart="65.27" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="93" type="type1" route="route1" depart="65.34" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="94" type="type1" route="route1" depart="67.22" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="95" type="type3" route="route2" depart="67.29" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="96" type="type1" route="route1" depart="68.31" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="97" type="type1" route="route1" depart="69.08" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="98" type="type1" route="route1" depart="69.77" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="99" type="type1" route="route1" depart="70.41" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="100" type="type1" route="route1" depart="70.44" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="101" type="type1" route="route2" depart="74.17" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="102" type="type1" route="route2" depart="74.21" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="103" type="type1" route="route1" depart="74.91" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="104" type="type1" route="route1" depart="76.11" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="105" type="type1" route="route1" depart="77.71" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="106" type="type1" route="route2" depart="79.79" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="107" type="type1" route="route1" depart="80.97" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="108" type="type1" route="route1" depart="81.87" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="109" type="type1" route="route1" depart="86.33" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="110" type="type1" route="route1" depart="88.29" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="111" type="type1" route="route2" depart="88.87" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="112" type="type1" route="route1" depart="89.61" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="113" type="type1" route="route1" depart="89.85" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="114" type="type1" route="route2" depart="92.57" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="115" type="type1" route="route1" depart="92.86" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="116" type="type1" route="route1" depart="92.91" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="117" type="type1" route="route1" depart="93.04" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="118" type="type1" route="route2" depart="93.46" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="119" type="type1" route="route1" depart="93.87" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="120" type="type1" route="route1" depart="94.13" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="121" type="type1" route="route2" depart="94.66" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="122" type="type1" route="route1" depart="95.2" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="123" type="type1" route="route1" depart="95.85" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="124" type="type1" route="route1" depart="97.0" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="125" type="type1" route="route2" depart="97.41" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="126" type="type1" route="route1" depart="98.19" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="127" type="type1" route="route1" depart="99.17" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="128" type="type1" route="route1" depart="100.05" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="129" type="type1" route="route1" depart="102.97" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="130" type="type1" route="route1" depart="103.22" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="131" type="type1" route="route1" depart="105.81" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="132" type="type1" route="route1" depart="106.99" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="133" type="type1" route="route1" depart="107.57" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="134" type="type1" route="route2" depart="107.61" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="135" type="type1" route="route2" depart="108.15" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="136" type="type1" route="route1" depart="109.0" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="137" type="type1" route="route1" depart="110.22" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="138" type="type1" route="route1" depart="111.11" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="139" type="type1" route="route1" depart="111.23" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="140" type="type1" route="route2" depart="112.23" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="141" type="type1" route="route1" depart="112.45" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="142" type="type1" route="route2" depart="113.4" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="143" type="type1" route="route1" depart="113.72" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="144" type="type1" route="route1" depart="115.09" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="145" type="type1" route="route1" depart="115.42" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="146" type="type1" route="route1" depart="115.84" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="147" type="type1" route="route1" depart="119.37" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="148" type="type1" route="route1" depart="119.53" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="149" type="type1" route="route2" depart="120.22" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="150" type="type1" route="route1" depart="120.35" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="151" type="type1" route="route1" depart="120.43" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="152" type="type1" route="route1" depart="121.29" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="153" type="type1" route="route2" depart="123.9" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="154" type="type1" route="route1" depart="124.29" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="155" type="type1" route="route1" depart="125.37" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="156" type="type1" route="route1" depart="125.93" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="157" type="type1" route="route1" depart="127.0" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="158" type="type1" route="route1" depart="127.11" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="159" type="type1" route="route1" depart="127.52" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="160" type="type1" route="route2" depart="127.67" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="161" type="type1" route="route1" depart="128.0" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="162" type="type1" route="route1" depart="128.57" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="163" type="type1" route="route1" depart="128.75" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="164" type="type1" route="route1" depart="130.56" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="165" type="type1" route="route1" depart="131.16" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="166" type="type1" route="route2" depart="131.76" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="167" type="type1" route="route1" depart="131.8" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="168" type="type1" route="route1" depart="133.95" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="169" type="type1" route="route2" depart="134.08" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="170" type="type1" route="route2" depart="134.91" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="171" type="type1" route="route1" depart="136.49" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="172" type="type1" route="route2" depart="136.72" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="173" type="type1" route="route1" depart="136.78" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="174" type="type1" route="route1" depart="137.74" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="175" type="type1" route="route1" depart="138.37" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="176" type="type1" route="route1" depart="139.19" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="177" type="type1" route="route1" depart="141.85" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="178" type="type1" route="route1" depart="141.87" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="179" type="type1" route="route2" depart="143.54" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="180" type="type1" route="route2" depart="144.28" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="181" type="type1" route="route2" depart="146.28" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="182" type="type1" route="route2" depart="146.33" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="183" type="type1" route="route1" depart="147.77" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="184" type="type1" route="route1" depart="148.49" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="185" type="type1" route="route1" depart="149.08" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="186" type="type1" route="route1" depart="150.42" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="187" type="type1" route="route1" depart="150.52" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="188" type="type1" route="route1" depart="151.5" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="189" type="type1" route="route2" depart="151.82" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="190" type="type1" route="route2" depart="153.51" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="191" type="type1" route="route1" depart="154.83" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="192" type="type1" route="route1" depart="155.94" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="193" type="type1" route="route1" depart="156.0" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="194" type="type1" route="route1" depart="156.14" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="195" type="type1" route="route1" depart="156.5" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="196" type="type1" route="route1" depart="156.63" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="197" type="type1" route="route1" depart="156.9" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="198" type="type1" route="route1" depart="157.14" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="199" type="type1" route="route2" depart="157.57" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="200" type="type1" route="route1" depart="161.54" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="201" type="type1" route="route2" depart="161.97" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="202" type="type1" route="route1" depart="162.24" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="203" type="type1" route="route2" depart="162.45" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="204" type="type1" route="route1" depart="162.7" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="205" type="type1" route="route1" depart="162.86" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="206" type="type1" route="route1" depart="164.11" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="207" type="type1" route="route1" depart="165.19" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="208" type="type1" route="route1" depart="165.21" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="209" type="type1" route="route1" depart="165.39" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="210" type="type1" route="route2" depart="165.7" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="211" type="type1" route="route1" depart="167.15" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="212" type="type1" route="route1" depart="167.42" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="213" type="type1" route="route1" depart="167.86" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="214" type="type1" route="route1" depart="169.59" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="215" type="type1" route="route2" depart="170.29" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="216" type="type1" route="route1" depart="172.09" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="217" type="type1" route="route1" depart="172.4" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="218" type="type1" route="route1" depart="173.31" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="219" type="type1" route="route1" depart="174.6" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="220" type="type1" route="route2" depart="175.23" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="221" type="type1" route="route2" depart="175.36" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="222" type="type1" route="route1" depart="175.69" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="223" type="type1" route="route1" depart="176.22" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="224" type="type1" route="route1" depart="176.66" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="225" type="type1" route="route1" depart="176.84" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="226" type="type1" route="route1" depart="179.59" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="227" type="type1" route="route1" depart="181.72" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="228" type="type1" route="route1" depart="182.01" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="229" type="type1" route="route1" depart="182.04" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="230" type="type1" route="route2" depart="182.29" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="231" type="type1" route="route2" depart="182.45" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="232" type="type1" route="route1" depart="182.57" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="233" type="type1" route="route1" depart="183.77" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="234" type="type1" route="route1" depart="183.79" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="235" type="type1" route="route1" depart="184.31" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="236" type="type1" route="route1" depart="184.68" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="237" type="type1" route="route2" depart="184.74" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="238" type="type1" route="route1" depart="185.47" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="239" type="type1" route="route1" depart="185.71" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="240" type="type1" route="route1" depart="185.8" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="241" type="type1" route="route1" depart="187.46" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="242" type="type1" route="route1" depart="187.84" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="243" type="type1" route="route2" depart="188.26" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="244" type="type1" route="route1" depart="189.66" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="245" type="type1" route="route1" depart="190.18" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="246" type="type1" route="route1" depart="190.63" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="247" type="type1" route="route1" depart="190.95" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="248" type="type1" route="route1" depart="191.54" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="249" type="type1" route="route1" depart="191.88" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="250" type="type1" route="route1" depart="192.66" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="251" type="type1" route="route1" depart="193.12" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="252" type="type1" route="route1" depart="193.14" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="253" type="type1" route="route1" depart="194.34" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="254" type="type1" route="route1" depart="196.24" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="255" type="type1" route="route1" depart="196.64" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="256" type="type1" route="route1" depart="198.28" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="257" type="type1" route="route1" depart="201.35" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="258" type="type1" route="route1" depart="201.4" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="259" type="type1" route="route1" depart="201.41" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="260" type="type1" route="route2" depart="201.63" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="261" type="type1" route="route1" depart="201.8" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="262" type="type1" route="route1" depart="201.82" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="263" type="type1" route="route1" depart="202.43" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="264" type="type1" route="route1" depart="202.79" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="265" type="type1" route="route1" depart="204.31" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="266" type="type1" route="route1" depart="204.42" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="267" type="type1" route="route1" depart="206.54" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="268" type="type1" route="route1" depart="206.99" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="269" type="type1" route="route1" depart="207.38" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="270" type="type1" route="route1" depart="207.74" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="271" type="type1" route="route1" depart="207.75" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="272" type="type1" route="route1" depart="207.78" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="273" type="type1" route="route1" depart="208.47" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="274" type="type1" route="route1" depart="213.55" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="275" type="type1" route="route1" depart="213.72" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="276" type="type1" route="route1" depart="213.83" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="277" type="type1" route="route1" depart="214.22" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="278" type="type1" route="route1" depart="214.33" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="279" type="type1" route="route1" depart="214.39" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="280" type="type1" route="route1" depart="214.75" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="281" type="type1" route="route1" depart="214.79" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="282" type="type1" route="route1" depart="216.01" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="283" type="type1" route="route1" depart="216.96" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="284" type="type1" route="route1" depart="217.76" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="285" type="type1" route="route1" depart="218.42" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="286" type="type1" route="route1" depart="218.76" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="287" type="type1" route="route1" depart="219.74" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="288" type="type1" route="route1" depart="219.88" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="289" type="type1" route="route1" depart="220.03" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="290" type="type1" route="route1" depart="220.88" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="291" type="type1" route="route1" depart="221.41" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="292" type="type1" route="route1" depart="222.36" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="293" type="type1" route="route1" depart="222.64" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="294" type="type1" route="route1" depart="223.54" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="295" type="type1" route="route1" depart="223.55" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="296" type="type1" route="route1" depart="224.04" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="297" type="type1" route="route1" depart="224.2" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="298" type="type1" route="route1" depart="224.29" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="299" type="type1" route="route1" depart="224.31" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="300" type="type1" route="route1" depart="224.87" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="301" type="type1" route="route1" depart="225.02" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="302" type="type1" route="route1" depart="225.07" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="303" type="type1" route="route1" depart="225.25" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="304" type="type1" route="route1" depart="225.38" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="305" type="type1" route="route1" depart="225.74" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="306" type="type1" route="route1" depart="226.68" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="307" type="type1" route="route1" depart="228.58" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="308" type="type1" route="route1" depart="229.44" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="309" type="type1" route="route1" depart="229.99" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="310" type="type1" route="route1" depart="230.64" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="311" type="type1" route="route1" depart="231.49" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="312" type="type1" route="route1" depart="231.72" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="313" type="type1" route="route1" depart="231.86" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="314" type="type1" route="route1" depart="231.94" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="315" type="type1" route="route1" depart="232.72" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="316" type="type1" route="route1" depart="233.02" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="317" type="type1" route="route1" depart="233.38" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="318" type="type1" route="route1" depart="234.11" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="319" type="type1" route="route1" depart="235.01" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="320" type="type1" route="route1" depart="235.42" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="321" type="type1" route="route1" depart="235.73" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="322" type="type1" route="route1" depart="236.36" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="323" type="type1" route="route1" depart="238.14" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="324" type="type1" route="route1" depart="238.43" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="325" type="type1" route="route1" depart="238.53" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="326" type="type1" route="route1" depart="239.39" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="327" type="type1" route="route1" depart="240.98" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="328" type="type1" route="route1" depart="241.04" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="329" type="type1" route="route1" depart="241.41" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="330" type="type1" route="route1" depart="242.82" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="331" type="type1" route="route1" depart="245.22" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="332" type="type1" route="route1" depart="245.39" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="333" type="type1" route="route1" depart="245.55" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="334" type="type1" route="route1" depart="245.93" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="335" type="type1" route="route1" depart="245.98" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="336" type="type1" route="route1" depart="246.01" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="337" type="type1" route="route1" depart="246.94" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="338" type="type1" route="route1" depart="247.07" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="339" type="type1" route="route1" depart="248.67" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="340" type="type1" route="route1" depart="248.82" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="341" type="type1" route="route1" depart="249.94" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="342" type="type1" route="route1" depart="250.05" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="343" type="type1" route="route1" depart="250.36" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="344" type="type1" route="route1" depart="250.53" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="345" type="type1" route="route1" depart="253.52" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="346" type="type1" route="route1" depart="253.83" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="347" type="type1" route="route1" depart="254.69" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="348" type="type1" route="route1" depart="254.87" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="349" type="type1" route="route1" depart="256.82" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="350" type="type1" route="route1" depart="257.67" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="351" type="type1" route="route1" depart="257.85" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="352" type="type1" route="route1" depart="258.39" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="353" type="type1" route="route1" depart="258.79" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="354" type="type1" route="route1" depart="259.0" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="355" type="type1" route="route1" depart="261.74" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="356" type="type1" route="route1" depart="262.05" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="357" type="type1" route="route1" depart="262.52" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="358" type="type1" route="route1" depart="263.97" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="359" type="type1" route="route1" depart="264.67" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="360" type="type1" route="route1" depart="265.38" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="361" type="type1" route="route1" depart="265.68" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="362" type="type1" route="route1" depart="266.16" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="363" type="type1" route="route1" depart="267.74" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="364" type="type1" route="route1" depart="267.81" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="365" type="type1" route="route1" depart="268.51" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="366" type="type1" route="route1" depart="272.83" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="367" type="type1" route="route1" depart="273.69" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="368" type="type1" route="route1" depart="276.68" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="369" type="type1" route="route1" depart="277.51" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="370" type="type1" route="route1" depart="280.04" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="371" type="type1" route="route1" depart="281.27" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="372" type="type1" route="route1" depart="281.3" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="373" type="type1" route="route1" depart="282.12" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="374" type="type1" route="route1" depart="284.7" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="375" type="type1" route="route1" depart="284.76" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="376" type="type1" route="route1" depart="284.87" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="377" type="type1" route="route1" depart="285.25" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="378" type="type1" route="route1" depart="286.76" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="379" type="type1" route="route1" depart="288.38" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="380" type="type1" route="route1" depart="288.64" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="381" type="type1" route="route1" depart="290.11" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="382" type="type1" route="route1" depart="291.97" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="383" type="type1" route="route1" depart="292.96" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="384" type="type1" route="route1" depart="293.1" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="385" type="type1" route="route1" depart="293.77" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="386" type="type1" route="route1" depart="294.62" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="387" type="type1" route="route1" depart="296.3" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="388" type="type1" route="route1" depart="298.41" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="389" type="type1" route="route1" depart="298.76" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="390" type="type1" route="route1" depart="298.98" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+<vehicle id="391" type="type1" route="route1" depart="299.85" departLane="free" departSpeed="8.54" departPos="base">
+<param key="has.driverstate.device" value="true"/>
+</vehicle>
+</routes>
