@@ -8,3 +8,4 @@ holy*
 .DS_Store
 *.pyc
 __pycache__
+exp_route/C_route/*

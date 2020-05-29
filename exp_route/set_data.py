@@ -96,24 +96,24 @@ def simulate(flow):
         r = 'C_route/%s_%s'%(str(flow),file_name[i])
         command='sumo -c %s.sumocfg --no-warnings'%(r)
         result=os.popen(command).read()
+        #print(result)
         t = result.split('\n')
         for j in range(np.size(t)):
             if 'DepartDelay:' in t[j]:
                 rate=action[i]/flow
-                Delay=float(result.split('\n')[j].split(' ')[2])
+                Delay=abs(float(result.split('\n')[j].split(' ')[2])) if abs(float(result.split('\n')[j].split(' ')[2]))!=1.0 else 1.01
                 #print(rate)
                 #print(float(math.log10(Delay)))
                 tmp.append(action[i])
                 tmp.append(Delay)
-                tmp.append('%.2f'%((1-float(rate))+float(1/math.log10(Delay))))
+                try:
+                    tmp.append('%.2f'%((1-float(rate))+float(1/math.log10(Delay))))
+                except:
+                    tmp.append(0)
                 result_list.append(tmp)
                 break
-    print(result_list)
-    m=[0,0,0]
-    for i in result_list:
-        if float(i[2])>float(m[2]):
-            m=i
-    print(m)
+    #print(result_list)
+    return result_list
 
 if __name__ == "__main__":
     flow =436
