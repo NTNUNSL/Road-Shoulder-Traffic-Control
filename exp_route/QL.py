@@ -8,6 +8,9 @@
 # Q_ -> Q-Learning's value
 # N_ -> Next state's value
 
+
+###0529 Updating Q_value
+
 import os
 import sys
 import math
@@ -52,7 +55,8 @@ def exp():
                 C_flow = C_state['flow'][j] ## Current flow
                 C_out  = C_state['out'][j]  ## Current out flow
                 C_speed = C_state['speed'][j] if int(C_state['speed'][j])<15 else 'max' ## Current speed
-                N_flow = C_state['flow'][j+1] if j<size-1 else 0    ## Next state flow
+                N_flow = C_state['flow'][j+1] if j<size-1 else 0    ## Next state flow(real)
+                N_state = next_state[C_flow-300]    ## Next state table
                 C_time = []
                 Q_state = Q_now.iloc[C_flow-300] ##Q_value
 
@@ -62,6 +66,7 @@ def exp():
                     if Q_state[a] > Q_state[Qa]:
                         Qa=a
                 C_action=action[int(Qa.replace('a',''))-1] if Q_state[Qa]!=0 else action[random.randint(0,7)]
+                print(C_action)
                 if j>0:
                     Cp = action_table[j-1]
                     if C_action-Cp>10:
@@ -69,9 +74,9 @@ def exp():
                     elif C_action-Cp<(-10):
                         C_action=Cp-10
                     action_table.append(C_action)
+                    print(Cp)
                 else:
                     action_table.append(C_action)
-
                 print(C_action)
 
                 for k in range(C_flow):
@@ -91,10 +96,19 @@ def exp():
                         m=r
                 print(m)
                 C_reward = m[2]
-                '''
+                
+                ''' Testing update Q_value
+
                 if Q_state['a1']==0:
                     QN_state = 0
-                    Q_state[file_name[i]]=(1-Alpha)*Q_state[file_name[i]]+Alpha*(Cr+Gamma*(QN_state))
+                    Q_state[file_name[i]]=(1-Alpha)*Q_state[file_name[i]]+Alpha*(C_reward+Gamma*(QN_state))
+                else:
+                    QN_state = 0
+                    for s in N_state:
+                        if s >0:
+                            for st in Q_now.iloc[s-300]:
+                                pass
+                    Q_state[file_name[i]]=(1-Alpha)*Q_state[file_name[i]]+Alpha*(C_reward+Gamma*(QN_state))
                 Q_now.iloc[C_flow-300]=Q_state
                 '''
                 
@@ -107,6 +121,7 @@ def exp():
                     if ns[k] == 0 or ns[k] == N_flow:
                         ns[k]=N_flow
                         break
+            ##Simulate all
             print('%s Epoch : %s Finished!'%(i.split('/')[2],epoch+1))
             time.sort()
 
@@ -133,7 +148,9 @@ if __name__ == "__main__":
     Q_now.iloc[0]=a
     print(Q_now.iloc[0])
     print(Qa.replace('a',''))'''
-    exp()
+    #exp()
+    n = next_state[0]
+    print(n)
 
 #for i in next_state:
 #    print(i)
