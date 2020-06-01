@@ -105,6 +105,7 @@ def simulate(flow):
                 #print(rate)
                 #print(float(math.log10(Delay)))
                 tmp.append(action[i])
+                tmp.append(file_name[i])
                 tmp.append(Delay)
                 try:
                     tmp.append('%.2f'%((1-float(rate))+float(1/math.log10(Delay))))
