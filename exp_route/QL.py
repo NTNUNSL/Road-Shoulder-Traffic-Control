@@ -86,8 +86,8 @@ def exp():
                 C_time.sort()
 
                 ##### Generate simulation #####
-                print('%s Epoch : %s, state : %s, flow : %s, out : %s'%(i.split('/')[2],epoch+1,j+1,C_flow,C_out))
-                set_data.route_generate(C_flow,C_out,C_time,C_speed,action,file_name)
+                print('%s Epoch : %s, state : %s, flow : %s, out : %s, action : %s'%(i.split('/')[2],epoch+1,j+1,C_flow,C_out,C_action))
+                set_data.route_generate(C_flow,C_out,C_time,C_speed,C_action,file_name)
                 result = set_data.simulate(C_flow)
                 print(result)
 

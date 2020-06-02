@@ -77,7 +77,7 @@ def route_generate(flow,out_flow,time,t_speed,action,file_name):
     for i in range(flow):
         time.append(float(random.randint(0,29999)/100))
     time.sort()'''
-
+    '''
     for i in range(np.size(action)):
         with open('C_route/%s_%s.sumocfg'%(str(flow),file_name[i]),'w') as f:
             t = '%s_%s'%(str(flow),file_name[i])
@@ -88,6 +88,16 @@ def route_generate(flow,out_flow,time,t_speed,action,file_name):
             freetrips.write(route_title)
             route_set(freetrips,flow,out_flow,t_speed,time,action[i])
             freetrips.write("</routes>\n")
+    '''
+    with open('C_route/%s_%s.sumocfg'%(str(flow),file_name[i]),'w') as f:
+        t = '%s_%s'%(str(flow),file_name[i])
+        x=text.sumo_conf(t)
+        f.write(x)
+    with open('C_route/%s_%s.xml'%(str(flow),file_name[i]),'w') as freetrips:
+        sumolib.writeXMLHeader(freetrips,'Danny Cheng, departLane: free','routes')
+        freetrips.write(route_title)
+        route_set(freetrips,flow,out_flow,t_speed,time,action)
+        freetrips.write("</routes>\n")
 
 def simulate(flow):
     result_list=[]
