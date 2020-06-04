@@ -75,13 +75,25 @@ def route_set(freetrips,flow,out_flow,t_speed,time,shoulder):
 def route_generate(flow,out_flow,time,t_speed,action,file_name):
     with open('C_route/%s_%s.sumocfg'%(str(flow),file_name),'w') as f:
         t = '%s_%s'%(str(flow),file_name)
-        x=text.sumo_conf(t)
+        x = text.sumo_conf(t)
         f.write(x)
     with open('C_route/%s_%s.xml'%(str(flow),file_name),'w') as freetrips:
         sumolib.writeXMLHeader(freetrips,'Danny Cheng, departLane: free','routes')
         freetrips.write(route_title)
         route_set(freetrips,flow,out_flow,t_speed,time,action)
         freetrips.write("</routes>\n")
+def Epo_route_generate(state,time,action,epo):
+    '''with open('C_route/epo_%s.sumocfg'%(epo),'w') as f:
+        t = 'epo_%s'%epo
+        x = text.sumo_conf(t)
+        f.write(x)
+    with open('C_route/epo_%s.xml'%(epo),'w') as freetrips:
+        sumolib.writeXMLHeader(freetrips,'Danny Cheng, departLane: free','routes')
+        freetrips.write(route_title)
+        for i in range (np.size(time)):'''
+    print(state['flow'][1],time[500],action['a1'],epo)
+
+
 
 def simulate(flow,action,file_name):
     result_list=[]
@@ -101,12 +113,12 @@ def simulate(flow,action,file_name):
             tmp.append(file_name)
             tmp.append(Delay)
             try:
-                tmp.append('%.2f'%((1-float(rate))+float(1/math.log10(Delay))))
+                tmp.append('%.2f'%((1-float(rate))+float((1/math.log10(Delay))*0.1)))
             except:
                 tmp.append(0)
             result_list.append(tmp)
             break
-    return result_list
+    return tmp
 
 if __name__ == "__main__":
     flow =436
