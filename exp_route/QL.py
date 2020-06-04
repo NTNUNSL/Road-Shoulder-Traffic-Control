@@ -67,16 +67,16 @@ def exp():
                 C_out   = C_state['out'][j]  ## Current out flow
                 C_speed = C_state['speed'][j] if int(C_state['speed'][j])<15 else '15' ## Current speed
                 N_flow  = C_state['flow'][j+1] if j<size-1 else 0    ## Next state flow(real)
-                N_state = next_state[C_flow-300]    ## Next state table
+                N_state = next_state[C_flow]    ## Next state table
                 C_time  = []
-                Q_state = Q_now.iloc[C_flow-300] ##Q_value
+                Q_state = Q_now.iloc[C_flow] ##Q_value
 
                 ##### Choose Action #####
                 epsilon = Epsilon+((Epoch-epoch)/Epoch)*(0.5)
                 #print(epsilon)
                 C_action = QL_brain.choose_action(Q_state,C_flow,Counter,action,epsilon)
                 Qa = [ac for ac in action if action[ac]==C_action][0]
-                Counter[Qa][C_flow-300]+=1
+                Counter[Qa][C_flow]+=1
                 action_table.append(C_action)
                 #print(C_action,Qa)
 
@@ -107,13 +107,13 @@ def exp():
                 C_reward+=float(result[3])
 
                 ##### update Q_value #####
-                Q_now.iloc[C_flow-300]=QL_brain.Update_Q_value(Q_state,Q_now,C_flow,N_state,result,Counter,Qa,Alpha,Gamma)
+                Q_now.iloc[C_flow]=QL_brain.Update_Q_value(Q_state,Q_now,C_flow,N_state,result,Counter,Qa,Alpha,Gamma)
                 #print(Q_now.iloc[C_flow-300])
 
                 #####   update next state table   #####
                 
                 print(Time.time()-S_time)
-                ns = next_state[C_flow-300]
+                ns = next_state[C_flow]
                 for k in range (len(ns)):
                     if ns[k] == 0 or ns[k] == N_flow:
                         ns[k] = N_flow
