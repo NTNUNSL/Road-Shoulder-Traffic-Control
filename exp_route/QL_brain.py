@@ -55,10 +55,10 @@ def Update_Q_value(Q_state,Q_now,C_flow,N_state,result,Counter,Qa,Alpha,Gamma):
             if int(s) >0:
                 N_table.append(s)
         Mr_state = np.random.choice(N_table)
-        print(Mr_state,N_table)
+        #print(Mr_state,N_table)
         M_state = Q_now.iloc[int(Mr_state-300)]
         QN_state = M_state.max()
-        print(M_state.max(),QN_state)
+        #print(M_state.max(),QN_state)
         Q_state[result[1]]=(1-Lr)*Q_state[result[1]]+Lr*(float(result[3])+Gamma*(QN_state))
     #Q_now.iloc[C_flow-300]=Q_state
     return Q_state

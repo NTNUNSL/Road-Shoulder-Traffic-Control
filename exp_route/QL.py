@@ -39,7 +39,7 @@ Q_now      = Q_table
 Counter    = pd.DataFrame(np.zeros((300,8),dtype=int),columns=action.keys()) ## Counter[action][flow-300]
 
 
-Epoch = 1
+Epoch = 100
 Alpha = 0.7
 Gamma = 0.7
 Epsilon = 0.2
@@ -73,12 +73,12 @@ def exp():
 
                 ##### Choose Action #####
                 epsilon = Epsilon+((Epoch-epoch)/Epoch)*(0.5)
-                print(epsilon)
+                #print(epsilon)
                 C_action = QL_brain.choose_action(Q_state,C_flow,Counter,action,epsilon)
                 Qa = [ac for ac in action if action[ac]==C_action][0]
                 Counter[Qa][C_flow-300]+=1
                 action_table.append(C_action)
-                print(C_action,Qa)
+                #print(C_action,Qa)
 
                 ##### Stairs Choose action #####
                 '''if j>0:
@@ -103,12 +103,12 @@ def exp():
                 print('%s Epoch : %s, state : %s, flow : %s, out : %s, action : %s'%(i.split('/')[2],epoch+1,j+1,C_flow,C_out,C_action))
                 set_data.route_generate(C_flow,C_out,C_time,C_speed,C_action,Qa)
                 result = set_data.simulate(C_flow,C_action,Qa)
-                print(result)
+                #print(result)
                 C_reward+=float(result[3])
 
                 ##### update Q_value #####
                 Q_now.iloc[C_flow-300]=QL_brain.Update_Q_value(Q_state,Q_now,C_flow,N_state,result,Counter,Qa,Alpha,Gamma)
-                print(Q_now.iloc[C_flow-300])
+                #print(Q_now.iloc[C_flow-300])
 
                 #####   update next state table   #####
                 
@@ -119,8 +119,8 @@ def exp():
                         ns[k] = N_flow
                         break
             D_reward.append(C_reward)
-            print(action_table)
-            print(C_reward)
+            #print(action_table)
+            #print(C_reward)
             ##Simulate all
             print('%s Epoch : %s Finished!'%(i.split('/')[2],epoch+1))
             time.sort()
@@ -129,8 +129,10 @@ def exp():
         reward.append(D_reward)
         Q_now.to_csv('table/table_day%s.csv'%day,index=False)
         np.savetxt('Rewards/reward_%s.txt'%i.split('/')[2].split('.')[0].split('_')[1],D_reward,fmt='%s',delimiter=',')
+        print('Output done.')
         day += 1
     P_time_e = Time.time()
+    print(P_time_e-P_time_s)
 
 
 if __name__ == "__main__":
