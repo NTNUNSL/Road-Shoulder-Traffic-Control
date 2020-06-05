@@ -36,7 +36,7 @@ State      = sorted(glob.glob('../training_data/state*'),key=os.path.basename)
 Q_table    = pd.read_csv('Q_table.csv',dtype=float)
 next_state = np.loadtxt('next_state.txt',delimiter=',')
 Q_now      = Q_table
-Counter    = pd.DataFrame(np.zeros((300,8),dtype=int),columns=action.keys()) ## Counter[action][flow-300]
+Counter    = pd.DataFrame(np.zeros((600,8),dtype=int),columns=action.keys()) ## Counter[action][flow-300]
 
 
 Epoch = 100
