@@ -45,7 +45,8 @@ def choose_action(Q_state,C_flow,Counter,action,Epsilon):
 
 def Update_Q_value(Q_state,Q_now,C_flow,N_state,result,Counter,Qa,Alpha,Gamma):
     Lr = float('%.2f'%pow((1/Counter[Qa][C_flow]),Alpha))
-    if Q_state.max()==0:
+    print(N_state)
+    if Q_state.max()==0 or N_state.max()==0:
         QN_state=0
         Q_state[result[1]]=(1-Lr)*Q_state[result[1]]+Lr*(float(result[3])+Gamma*(QN_state))
     else:
@@ -54,6 +55,7 @@ def Update_Q_value(Q_state,Q_now,C_flow,N_state,result,Counter,Qa,Alpha,Gamma):
         for s in N_state:
             if int(s) >0:
                 N_table.append(s)
+        print(N_table,len(N_table))
         Mr_state = np.random.choice(N_table)
         #print(Mr_state,N_table)
         M_state = Q_now.iloc[int(Mr_state-300)]
