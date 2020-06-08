@@ -108,6 +108,8 @@ if __name__ == "__main__":
     origin()
     non_control()
     action_table=QL_control()
-
+    k=[]
     for i in range(len(state['flow'])):
-        print(state['shoulder'][i],action_table[i],state['out'][i])
+        k.append([state['shoulder'][i],action_table[i],state['out'][i]])
+    df = pd.DataFrame(k,columns=['non_control','QL_control','out'])
+    df.to_csv('../flow/validate/shoulder.csv')
