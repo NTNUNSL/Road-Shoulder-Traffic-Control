@@ -38,9 +38,9 @@ Reward_total=[]
 flow=427
 out_flow=80
 
-def route_set(freetrips,flow,out_flow,t_speed,time,shoulder):
+def route_set(freetrips,flow,out_flow,t_speed,time,shoulder,k):
     done_flow=[]
-    num,k,count=0,0,0
+    num,count=0,0
     #t_speed='8.54'
     while (num<out_flow):
         if flow>np.size(done_flow):
@@ -80,7 +80,7 @@ def route_generate(flow,out_flow,time,t_speed,action,file_name):
     with open('C_route/%s_%s.xml'%(str(flow),file_name),'w') as freetrips:
         sumolib.writeXMLHeader(freetrips,'Danny Cheng, departLane: free','routes')
         freetrips.write(route_title)
-        route_set(freetrips,flow,out_flow,t_speed,time,action)
+        route_set(freetrips,flow,out_flow,t_speed,time,action,0)
         freetrips.write("</routes>\n")
 def Epo_route_generate(state,time,action,epo):
     '''with open('C_route/epo_%s.sumocfg'%(epo),'w') as f:
