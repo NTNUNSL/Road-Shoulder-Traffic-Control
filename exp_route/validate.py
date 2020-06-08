@@ -112,4 +112,4 @@ if __name__ == "__main__":
     for i in range(len(state['flow'])):
         k.append([state['shoulder'][i],action_table[i],state['out'][i]])
     df = pd.DataFrame(k,columns=['non_control','QL_control','out'])
-    df.to_csv('../flow/validate/shoulder.csv')
+    df.to_csv('../flow/validate/shoulder.csv',index=False)
