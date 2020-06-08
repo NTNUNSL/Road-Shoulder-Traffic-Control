@@ -92,7 +92,7 @@ def QL_control():
             set_data.route_set(freetrips,state['flow'][i],state['out'][i],C_speed,time[i],C_action,k)
             k+=state['flow'][i]
         freetrips.write("</routes>\n")
-    return 1
+    return action_table
 
 if __name__ == "__main__":
     time=[]
@@ -107,4 +107,7 @@ if __name__ == "__main__":
     #time.sort()
     origin()
     non_control()
-    QL_control()
+    action_table=QL_control()
+
+    for i in range(len(state['flow'])):
+        print(state['shoulder'][i],action_table[i],state['out'][i])
