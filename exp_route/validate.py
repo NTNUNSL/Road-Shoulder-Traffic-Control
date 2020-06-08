@@ -81,7 +81,7 @@ def QL_control():
                 action_table.append(C_action)
             else:
                 table = Q_table.iloc[state['flow'][i]-1]
-                q = np.where(q==table.max())[0]
+                q = np.where(table==table.max())[0]
                 C_action = action['a%s'%np.random.choice(q)]
                 Cp = action_table[i-1]
                 if C_action-Cp>10:
