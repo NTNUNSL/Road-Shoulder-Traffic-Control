@@ -30,6 +30,7 @@ route_title='<vType id="type1" vClass="passenger"/>\n'\
 
 state = pd.read_csv('../flow/state_2020-0123.csv')
 Q_table = pd.read_csv('table/table_day1.csv')
+com = ['origin','non_control','QL_control']
 
 def origin():
     with open('../flow/validate/origin.sumocfg','w') as f:
@@ -47,6 +48,7 @@ def origin():
             k+=state['flow'][i]
         freetrips.write("</routes>\n")
     return 1
+
 def non_control():
     with open('../flow/validate/non_control.sumocfg','w') as f:
         t = 'non_control'
@@ -63,6 +65,7 @@ def non_control():
             k+=state['flow'][i]
         freetrips.write("</routes>\n")
     return 1
+
 def QL_control():
     with open('../flow/validate/QL_control.sumocfg','w') as f:
         t = 'QL_control'
@@ -84,11 +87,13 @@ def QL_control():
                 q = np.where(table==table.max())[0]
                 C_action = action['a%s'%(int(np.random.choice(q))+1)]
                 Cp = action_table[i-1]
+                ##### Stair case #####
                 if C_action-Cp>10:
                     C_action=Cp+10
                 elif C_action-Cp<(-10):
                     C_action=Cp-10
                 action_table.append(C_action)
+
             set_data.route_set(freetrips,state['flow'][i],state['out'][i],C_speed,time[i],C_action,k)
             k+=state['flow'][i]
         freetrips.write("</routes>\n")
@@ -103,11 +108,29 @@ if __name__ == "__main__":
             C_time.append(tmp+(i*300))
         C_time.sort()
         time.append(C_time)
-    #print(time)
-    #time.sort()
+
     origin()
     non_control()
     action_table=QL_control()
+    for i in com:
+        Delay = 0
+        r = '../flow/validate/%s.sumocfg'%i
+        for j in range(20):
+            if i=='origin':
+                origin()
+            elif i =='non_control':
+                non_control()
+            elif i=='QL_control':
+                action_table=QL_control
+            command='sumo -c %s --no-warnings'%(r)
+            result=os.popen(command).read().split('\n')
+            for k in range(np.size(result)):
+                if 'DepartDelay:' in result[k]:
+                    Delay+=abs(float(result.split('\n')[j].split(' ')[2]))
+        print('%s: %s'%(i, Delay))
+
+
+
     k=[]
     for i in range(len(state['flow'])):
         k.append([state['shoulder'][i],action_table[i],state['out'][i]])
