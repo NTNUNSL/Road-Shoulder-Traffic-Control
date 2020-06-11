@@ -109,9 +109,10 @@ if __name__ == "__main__":
         C_time.sort()
         time.append(C_time)
 
-    origin()
-    non_control()
-    action_table=QL_control()
+    #origin()
+    #non_control()
+    #action_table=QL_control()
+    t_delay=[]
     for i in com:
         Delay = 0
         r = '../flow/validate/%s.sumocfg'%i
@@ -121,18 +122,21 @@ if __name__ == "__main__":
             elif i =='non_control':
                 non_control()
             elif i=='QL_control':
-                action_table=QL_control
+                action_table=QL_control()
             command='sumo -c %s --no-warnings'%(r)
             result=os.popen(command).read().split('\n')
             for k in range(np.size(result)):
                 if 'DepartDelay:' in result[k]:
-                    Delay+=abs(float(result.split('\n')[j].split(' ')[2]))
-        print('%s: %s'%(i, Delay))
+                    Delay+=abs(float(result[k].split(' ')[2]))
+                    print(i,j,abs(float(result[k].split(' ')[2])))
+        t_delay.append(Delay/20)
+    for i in range(len(com)):
+        print('%s: %s'%(com[i], t_delay[i]))
 
 
 
-    k=[]
+    '''k=[]
     for i in range(len(state['flow'])):
         k.append([state['shoulder'][i],action_table[i],state['out'][i]])
     df = pd.DataFrame(k,columns=['non_control','QL_control','out'])
-    df.to_csv('../flow/validate/shoulder.csv',index=False)
+    df.to_csv('../flow/validate/shoulder.csv',index=False)'''

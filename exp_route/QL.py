@@ -40,7 +40,7 @@ Counter    = pd.DataFrame(np.zeros((600,8),dtype=int),columns=action.keys()) ## 
 
 
 Epoch = 100
-Alpha = 0.7
+Alpha = 0.8
 Gamma = 0.7
 Epsilon = 0.2
 reward=[]
@@ -127,8 +127,8 @@ def exp():
 
             set_data.Epo_route_generate(C_state,time,action,epoch)
         reward.append(D_reward)
-        Q_now.to_csv('table/table_day%s.csv'%day,index=False)
-        np.savetxt('Rewards/reward_%s.txt'%i.split('/')[2].split('.')[0].split('_')[1],D_reward,fmt='%s',delimiter=',')
+        Q_now.to_csv('table/table8_day%s.csv'%day,index=False)
+        np.savetxt('Rewards/reward8_%s.txt'%i.split('/')[2].split('.')[0].split('_')[1],D_reward,fmt='%s',delimiter=',')
         print('Output done.')
         day += 1
     P_time_e = Time.time()
