@@ -22,7 +22,7 @@ import sumolib
 
 action = [130,120,110,100,90,80,70,60]
 file_name = ['a1','a2','a3','a4','a5','a6','a7','a8']
-vehicle_id = '<vehicle id="%s" type="type%s" route="route%s" depart="%s" departLane="free" departSpeed="%s" departPos="base">\n'\
+vehicle_id = '<vehicle id="%s" type="type%s" route="route%s" depart="%s" departLane="best" departSpeed="%s" departPos="base">\n'\
                 '<param key="has.driverstate.device" value="true"/>\n'\
                 '</vehicle>\n'
 route_title='<vType id="type1" vClass="passenger"/>\n'\
@@ -95,7 +95,7 @@ def Epo_route_generate(state,time,action,epo):
 
 
 
-def simulate(flow,action,file_name):
+def simulate(flow,out,action,file_name):
     result_list=[]
     tmp = []
     r = 'C_route/%s_%s'%(str(flow),file_name)
@@ -107,13 +107,15 @@ def simulate(flow,action,file_name):
         if 'DepartDelay:' in t[j]:
             rate=action/flow
             Delay=abs(float(result.split('\n')[j].split(' ')[2])) if abs(float(result.split('\n')[j].split(' ')[2]))>1.0 else 1.01
+            o_flow = 50-(out-action)
             #print(rate)
             #print(float(math.log10(Delay)))
             tmp.append(action)
             tmp.append(file_name)
             tmp.append(Delay)
+            tmp.append(o_flow)
             try:
-                tmp.append('%.2f'%((1-float(rate))+float((1/math.log10(Delay))*0.1)))
+                tmp.append('%.2f'%((1-float(rate))+float((1/math.log10(Delay))*0.1)+o_flow))
             except:
                 tmp.append(0)
             result_list.append(tmp)

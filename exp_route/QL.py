@@ -65,7 +65,8 @@ def exp():
                 S_time  = Time.time()
                 C_flow  = C_state['flow'][j] ## Current flow
                 C_out   = C_state['out'][j]  ## Current out flow
-                C_speed = C_state['speed'][j] if int(C_state['speed'][j])<15 else '15' ## Current speed
+                #C_speed = C_state['speed'][j] if int(C_state['speed'][j])<15 else '15' ## Current speed
+                C_speed = 'max'
                 N_flow  = C_state['flow'][j+1] if j<size-1 else 0    ## Next state flow(real)
                 N_state = next_state[C_flow]    ## Next state table
                 C_time  = []
@@ -102,9 +103,9 @@ def exp():
                 ##### Generate simulation #####
                 print('%s Epoch : %s, state : %s, flow : %s, out : %s, action : %s'%(i.split('/')[2],epoch+1,j+1,C_flow,C_out,C_action))
                 set_data.route_generate(C_flow,C_out,C_time,C_speed,C_action,Qa)
-                result = set_data.simulate(C_flow,C_action,Qa)
-                #print(result)
-                C_reward+=float(result[3])
+                result = set_data.simulate(C_flow,C_out,C_action,Qa)
+                print(result)
+                C_reward+=float(result[4])
 
                 ##### update Q_value #####
                 Q_now.iloc[C_flow]=QL_brain.Update_Q_value(Q_state,Q_now,C_flow,N_state,result,Counter,Qa,Alpha,Gamma)
