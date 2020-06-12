@@ -29,7 +29,7 @@ route_title='<vType id="type1" vClass="passenger"/>\n'\
                             '<route id="route3" color="1,0,0" edges="lane_s_connect_in02 lane_s_in01 lane_s_in02 lane_s_connect02 lane_s_connect03 lane_s04"/>\n'
 
 state = pd.read_csv('../flow/state_2020-0123.csv')
-Q_table = pd.read_csv('table/table_day1.csv')
+Q_table = pd.read_csv('table/table_day8.csv')
 com = ['origin','non_control','QL_control']
 
 def origin():
@@ -132,7 +132,7 @@ if __name__ == "__main__":
         t_delay.append(Delay/20)
     for i in range(len(com)):
         print('%s: %s'%(com[i], t_delay[i]))
-
+    
 
 
     '''k=[]
