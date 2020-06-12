@@ -186,6 +186,8 @@ def exp_t():
 
     P_time_e = Time.time()
     print(P_time_e-P_time_s)
+    Q_now.to_csv('table/table_epo.csv'%day,index=False)
+    np.savetxt('Rewards/reward7_epo.txt'%i.split('/')[2].split('.')[0].split('_')[1],reward,fmt='%s',delimiter=',')
 
 
 
