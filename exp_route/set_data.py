@@ -107,7 +107,9 @@ def simulate(flow,out,action,file_name):
         if 'DepartDelay:' in t[j]:
             rate=action/flow
             Delay=abs(float(result.split('\n')[j].split(' ')[2])) if abs(float(result.split('\n')[j].split(' ')[2]))>1.0 else 1.01
-            o_flow = (50-(out-action))*0.1
+            o_flow = float('%.2f'%((out)/action))
+            e_Delay = float('%.2f'%(float(1/math.log10(Delay)))) if Delay > 1.01 else float('%.2f'%(float(1/math.log10(Delay))/2))
+            #o_flow = (50-(out-action))*0.1
             #print(rate)
             #print(float(math.log10(Delay)))
             tmp.append(action)
@@ -115,9 +117,10 @@ def simulate(flow,out,action,file_name):
             tmp.append(Delay)
             tmp.append(o_flow)
             try:
-                tmp.append('%.2f'%((1-float(rate))+float((1/math.log10(Delay)))+o_flow))
-                print('%.2f'%((1-float(rate))+float((1/math.log10(Delay)))+o_flow))
-                print('%.2f'%((1-float(rate))+float((1/math.log10(Delay)))))
+                tmp.append(e_Delay+o_flow)
+                #tmp.append('%.2f'%((1-float(rate))+float((1/math.log10(Delay)))))
+                print('%.2f'%(e_Delay+o_flow))
+                print(e_Delay)
             except:
                 tmp.append(0)
             result_list.append(tmp)

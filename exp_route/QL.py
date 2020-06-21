@@ -39,12 +39,12 @@ Q_now      = Q_table
 Counter    = pd.DataFrame(np.zeros((600,8),dtype=int),columns=action.keys()) ## Counter[action][flow-300]
 
 
-Epoch = 100
+Epoch = 500
 Alpha = 0.7
 Gamma = 0.7
 Epsilon = 0.2
 reward=[]
-
+Action=[]
 #Q(S,A)<-(1-Alpha)Q(S,A)+Alpha(reward+Gamma(Q(S',A)))
 flow = 430
 out = 55
@@ -124,10 +124,12 @@ def exp_t():
     P_time_s = Time.time()
     for epoch in range(Epoch):
         D_reward=[]
+        D_action=[]
         for i in State:
             C_state = pd.read_csv(i)
             size    = len(C_state)
             C_reward=0
+            C_Action=0
             #Q_now = Q_table
             time  = []
             action_table=[]
@@ -163,7 +165,7 @@ def exp_t():
                 result = set_data.simulate(C_flow,C_out,C_action,Qa)
                 print(result)
                 C_reward+=float(result[4])
-
+                C_Action+=int(C_action)
                 ##### update Q_value #####
                 Q_now.iloc[C_flow]=QL_brain.Update_Q_value(Q_state,Q_now,C_flow,N_state,result,Counter,Qa,Alpha,Gamma)
                 #print(Q_now.iloc[C_flow-300])
@@ -176,18 +178,32 @@ def exp_t():
                     if ns[k] == 0 or ns[k] == N_flow:
                         ns[k] = N_flow
                         break
-            D_reward.append(C_reward)
+            D_reward.append('%.2f'%(C_reward))
+            D_action.append(C_Action)
             ##Simulate all
             print('%s Epoch : %s Finished!'%(i.split('/')[2],epoch+1))
             time.sort()
 
             set_data.Epo_route_generate(C_state,time,action,epoch)
         reward.append(D_reward)
+        Action.append(D_action)
+        if epoch==99:
+            Q_now.to_csv('table/table_epo100_t2_2.csv',index=False)
+            np.savetxt('Rewards/reward7_ep100_t2_2.txt',reward,fmt='%s',delimiter=',')
+            np.savetxt('Rewards/action7_ep100_t2_2.txt',Action,fmt='%s',delimiter=',')
+        elif epoch==299:
+            Q_now.to_csv('table/table_epo300_t2.csv',index=False)
+            np.savetxt('Rewards/reward7_ep300_t2.txt',reward,fmt='%s',delimiter=',')
+            np.savetxt('Rewards/action7_ep300_t2_2.txt',Action,fmt='%s',delimiter=',')
+        else:
+            Q_now.to_csv('table/table_epo500_t2.csv',index=False)
+            np.savetxt('Rewards/reward7_ep500_t2.txt',reward,fmt='%s',delimiter=',')
+            np.savetxt('Rewards/action7_ep500_t2_2.txt',Action,fmt='%s',delimiter=',')
 
     P_time_e = Time.time()
     print(P_time_e-P_time_s)
-    Q_now.to_csv('table/table_epo.csv',index=False)
-    np.savetxt('Rewards/reward7_epo.txt',reward,fmt='%s',delimiter=',')
+    #Q_now.to_csv('table/table_epo300_t2.csv',index=False)
+    #np.savetxt('Rewards/reward7_ep300_t2.txt',reward,fmt='%s',delimiter=',')
 
 
 
