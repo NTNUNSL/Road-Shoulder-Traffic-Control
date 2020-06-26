@@ -52,7 +52,7 @@ out = 55
 def exp():
     P_time_s = Time.time()
     day=1
-    for i in State:
+    for i in State[::-1]:
         C_state = pd.read_csv(i)
         size    = len(C_state)
         D_reward=[]
@@ -188,17 +188,17 @@ def exp_t():
         reward.append(D_reward)
         Action.append(D_action)
         if epoch==99:
-            Q_now.to_csv('table/table_epo100_t2_2.csv',index=False)
-            np.savetxt('Rewards/reward7_ep100_t2_2.txt',reward,fmt='%s',delimiter=',')
-            np.savetxt('Rewards/action7_ep100_t2_2.txt',Action,fmt='%s',delimiter=',')
+            Q_now.to_csv('table/table8_epo100_t2.csv',index=False)
+            np.savetxt('Rewards/reward8_ep100_t2.txt',reward,fmt='%s',delimiter=',')
+            np.savetxt('Rewards/action8_ep100_t2.txt',Action,fmt='%s',delimiter=',')
         elif epoch==299:
-            Q_now.to_csv('table/table_epo300_t2.csv',index=False)
-            np.savetxt('Rewards/reward7_ep300_t2.txt',reward,fmt='%s',delimiter=',')
-            np.savetxt('Rewards/action7_ep300_t2_2.txt',Action,fmt='%s',delimiter=',')
+            Q_now.to_csv('table/table8_epo300_t2.csv',index=False)
+            np.savetxt('Rewards/reward8_ep300_t2.txt',reward,fmt='%s',delimiter=',')
+            np.savetxt('Rewards/action8_ep300_t2.txt',Action,fmt='%s',delimiter=',')
         else:
-            Q_now.to_csv('table/table_epo500_t2.csv',index=False)
-            np.savetxt('Rewards/reward7_ep500_t2.txt',reward,fmt='%s',delimiter=',')
-            np.savetxt('Rewards/action7_ep500_t2_2.txt',Action,fmt='%s',delimiter=',')
+            Q_now.to_csv('table/table8_epo500_t2.csv',index=False)
+            np.savetxt('Rewards/reward8_ep500_t2.txt',reward,fmt='%s',delimiter=',')
+            np.savetxt('Rewards/action8_ep500_t2.txt',Action,fmt='%s',delimiter=',')
 
     P_time_e = Time.time()
     print(P_time_e-P_time_s)

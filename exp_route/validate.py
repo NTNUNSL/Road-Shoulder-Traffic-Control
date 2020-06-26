@@ -29,7 +29,7 @@ route_title='<vType id="type1" vClass="passenger"/>\n'\
                             '<route id="route3" color="1,0,0" edges="lane_s_connect_in02 lane_s_in01 lane_s_in02 lane_s_connect02 lane_s_connect03 lane_s04"/>\n'
 
 state = pd.read_csv('../flow/state_2020-0123.csv')
-Q_table = pd.read_csv('table/table_epo300_t2.csv')
+Q_table = pd.read_csv('table/table7_epo300_t4.csv')
 com = ['origin','non_control','QL_control']
 
 def origin():
@@ -116,11 +116,13 @@ if __name__ == "__main__":
     for i in com:
         Delay = 0
         r = '../flow/validate/%s.sumocfg'%i
-        for j in range(20):
+        for j in range(1):
             if i=='origin':
-                origin()
+                #origin()
+                continue
             elif i =='non_control':
-                non_control()
+                #non_control()
+                continue
             elif i=='QL_control':
                 action_table=QL_control()
             command='sumo -c %s --no-warnings'%(r)
@@ -134,9 +136,9 @@ if __name__ == "__main__":
         print('%s: %s'%(com[i], t_delay[i]))
     
 
-    '''
+    
     k=[]
     for i in range(len(state['flow'])):
         k.append([state['shoulder'][i],action_table[i],state['out'][i]])
     df = pd.DataFrame(k,columns=['non_control','QL_control','out'])
-    df.to_csv('../flow/validate/shoulder_epo300_t2.csv',index=False)'''
+    df.to_csv('../flow/validate/shoulder7_epo300_t4.csv',index=False)
