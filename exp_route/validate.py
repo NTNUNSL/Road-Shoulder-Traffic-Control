@@ -29,7 +29,7 @@ route_title='<vType id="type1" vClass="passenger"/>\n'\
                             '<route id="route3" color="1,0,0" edges="lane_s_connect_in02 lane_s_in01 lane_s_in02 lane_s_connect02 lane_s_connect03 lane_s04"/>\n'
 
 state = pd.read_csv('../flow/state_2020-0123.csv')
-Q_table = pd.read_csv('table/table7_epo300_t4.csv')
+Q_table = pd.read_csv('table/table7_epo100_t4.csv')
 com = ['origin','non_control','QL_control']
 
 def origin():
@@ -76,6 +76,7 @@ def QL_control():
         freetrips.write(route_title)
         k=0
         action_table=[]
+        ran=0
         for i in range(len(state['flow'])):
             #C_speed = state['speed'][i] if int(state['speed'][i])<15 else '15'
             C_speed='max'
@@ -85,6 +86,8 @@ def QL_control():
             else:
                 table = Q_table.iloc[state['flow'][i]-1]
                 q = np.where(table==table.max())[0]
+                if table.max()==0:
+                    ran+=1
                 C_action = action['a%s'%(int(np.random.choice(q))+1)]
                 Cp = action_table[i-1]
                 ##### Stair case #####
@@ -97,6 +100,7 @@ def QL_control():
             set_data.route_set(freetrips,state['flow'][i],state['out'][i],C_speed,time[i],C_action,k)
             k+=state['flow'][i]
         freetrips.write("</routes>\n")
+        print(ran)
     return action_table
 
 if __name__ == "__main__":
@@ -136,9 +140,9 @@ if __name__ == "__main__":
         print('%s: %s'%(com[i], t_delay[i]))
     
 
-    
+    '''
     k=[]
     for i in range(len(state['flow'])):
         k.append([state['shoulder'][i],action_table[i],state['out'][i]])
     df = pd.DataFrame(k,columns=['non_control','QL_control','out'])
-    df.to_csv('../flow/validate/shoulder7_epo300_t4.csv',index=False)
+    df.to_csv('../flow/validate/shoulder_epo100_t4.csv',index=False)'''
