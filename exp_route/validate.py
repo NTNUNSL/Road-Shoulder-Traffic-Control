@@ -29,7 +29,7 @@ route_title='<vType id="type1" vClass="passenger"/>\n'\
                             '<route id="route3" color="1,0,0" edges="lane_s_connect_in02 lane_s_in01 lane_s_in02 lane_s_connect02 lane_s_connect03 lane_s04"/>\n'
 
 state = pd.read_csv('../flow/state_2020-0123.csv')
-Q_table = pd.read_csv('table/table7_day8_t2.csv')
+Q_table = pd.read_csv('table/table7_epo100_t4.csv')
 com = ['origin','non_control','QL_control']
 
 def origin():
@@ -146,4 +146,4 @@ if __name__ == "__main__":
     for i in range(len(state['flow'])):
         k.append([state['shoulder'][i],action_table[i],state['out'][i]])
     df = pd.DataFrame(k,columns=['non_control','QL_control','out'])
-    df.to_csv('../flow/validate/shoulder_day8_t2.csv',index=False)
+    df.to_csv('../flow/validate/tt1.csv',index=False)
